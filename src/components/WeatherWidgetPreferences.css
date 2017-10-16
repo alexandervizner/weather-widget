@@ -1,0 +1,25 @@
+svg {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 2px;
+    fill: white;
+    width: 21px;
+    height: 21px;
+}
+
+svg:hover {
+    fill: gray;
+}
+
+.searchPanel {
+    padding: auto;
+}
+
+.settings {
+    margin: 20px;
+}
+
+.tempUnit {
+    margin-top: 20px;
+}
