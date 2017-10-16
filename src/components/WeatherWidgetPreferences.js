@@ -41,23 +41,6 @@ export default class WeatherWidgetPreferences extends Component {
                 <div className='tempUnit'>
                     <Toggle/>
                 </div>
-                {/* <div className='tempUnit'>
-                    <label>
-                        Degrees: {< ToggleButton
-                        inactiveLabel = '°F'
-                        activeLabel = '°C'
-                        value = {
-                            this.state.value || false
-                        }
-                        onToggle = {
-                            (value) => {
-                                this.setState({
-                                    value: !value
-                                })
-                            }
-                        } />}
-                    </label>
-                </div> */}
             </div>
         )
     }
