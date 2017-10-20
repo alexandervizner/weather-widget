@@ -29,7 +29,6 @@
 
 
 /* flip the pane when hovered */
-
 .flip-container.hover .flipper {
     transform: rotateY(180.1deg);
 }

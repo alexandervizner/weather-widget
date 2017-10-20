@@ -7,25 +7,23 @@ export default class Toggle extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      checked: !!(props.checked || props.defaultChecked),
-      hasFocus: false
+      isToggled: false
     };
   }
 
   hadleClick = event => {
-      this.setState({
-        hasFocus: true,
-        
-      })
+    this.setState(prevState => ({
+      isToggled: !prevState.isToggled
+    }));
   };
 
   render() {
-    const { ...inputProps } = this.props;
     return (
-      <div>
+      <div className="toggle">
         <label className="switch">
           <input type="checkbox" onClick={this.hadleClick} />
           <span className="slider round" />
+          <span className="tempUnit">{this.state.isToggled ? "C°" : "F°"}</span>
         </label>
       </div>
     );
@@ -33,7 +31,5 @@ export default class Toggle extends Component {
 }
 
 Toggle.propTypes = {
-  checked: PropTypes.bool,
-  defaultChecked: PropTypes.bool,
-  name: PropTypes.string
+  isToggled: PropTypes.bool
 };
