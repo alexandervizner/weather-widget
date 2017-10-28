@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import store from "store";
 
-import { KEY, DEFAULT_CITIES } from "./constants";
+import { KEY, DEFAULT_CITIES, APP_STORE_NAME } from "./constants";
 import { HttpClient } from "./utils/http-common";
 import WeatherWidget from "./components/WeatherWidget";
 
@@ -20,10 +20,11 @@ class AppContainer extends Component {
     };
 
     // Retrive settings from the store
-    if (store && store.get("appSettings")) {
-      settings = store.get("appSettings");
+    if (store && store.get(APP_STORE_NAME)) {
+      settings = store.get(APP_STORE_NAME);
     }
 
+    // TODO: save data in storage
     HttpClient.get("group", {
       params: {
         id: settings.cities.join(","),

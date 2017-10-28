@@ -10,10 +10,7 @@ function getCitiesNamesByIds(ids) {
 }
 
 function getCitiesIdsByNames(cityNames) {
-  return {
-      cities: DEFAULT_CITIES,
-      tempUnit: "C"
-  }
+  return DEFAULT_CITIES
 }
 
 export {

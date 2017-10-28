@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { MdSettings } from "react-icons/lib/md";
+
 import "./WeatherTable.css";
 
 export default class WeatherTable extends Component {
@@ -15,11 +17,14 @@ export default class WeatherTable extends Component {
         />
       ));
     }
-    
+
     return (
-      <table>
-        <tbody>{list}</tbody>
-      </table>
+      <div className="tempInfo">
+        <table>
+          <tbody>{list}</tbody>
+        </table>
+        <MdSettings onClick={this.props.toggleHover} />
+      </div>
     );
   }
 }
