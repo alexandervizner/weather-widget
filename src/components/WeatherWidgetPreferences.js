@@ -5,7 +5,7 @@ import { MdSave } from "react-icons/lib/md";
 
 import Toggle from "./Toggle";
 import SearchPanel from "./SearchPanel";
-import { scaleNames, APP_STORE_NAME } from "../constants";
+import { scaleNames, APP_STORE_NAME, DEFAULT_CITIES } from "../constants/common";
 import { getCitiesIdsByNames, getCitiesNamesByIds } from "../utils/helpers";
 
 import "./WeatherWidgetPreferences.css";
@@ -21,8 +21,13 @@ export default class WeatherWidgetPreferences extends Component {
 
   componentWillMount() {
     let settings = store.get(APP_STORE_NAME)
-    console.log(settings)
-    
+
+    if (!settings) {
+      settings = {
+        cities: DEFAULT_CITIES,
+        tempUnit: scaleNames.C
+      }
+    }    
   }
 
   handleSaveSettings = () => {

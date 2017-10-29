@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import store from "store";
 
-import { KEY, DEFAULT_CITIES, APP_STORE_NAME } from "./constants";
+import { KEY, DEFAULT_CITIES, APP_STORE_NAME } from "./constants/common";
 import { HttpClient } from "./utils/http-common";
 import WeatherWidget from "./components/WeatherWidget";
 

@@ -1,4 +1,4 @@
-import { DEFAULT_CITIES } from "../constants";
+import { DEFAULT_CITIES } from "../constants/common";
 
 // Reolves city name by id
 function getCityNameById(id) {
