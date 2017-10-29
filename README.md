@@ -20,4 +20,4 @@ and back side for settings:
 All settings are stored in and retrieved from localstorage using storejs lib.
 
 ### Open weather map API note
-The application is consumed free data from [OpenWeatherMap](http://openweathermap.org) using API_KEY. I share it here just for making review a bit simplier. Anyway I absolutely realize that this not normal aproach and conflicts with [TFA](https://12factor.net) principles. 
+The application consumes free data from [OpenWeatherMap](http://openweathermap.org) service that requires API key.
